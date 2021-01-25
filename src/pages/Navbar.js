@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import {colors} from '../variables'
 
+import Image from '../atoms/Image'
 import Text from '../atoms/Text'
 
 import sunset from '../assets/sunset_navbar.jpg'
@@ -9,7 +10,7 @@ import logo from '../assets/logo_FAKE.png'
 
 const Nav = styled.div`
     position: relative;
-    height: 300px;
+    height: 40vh;
     background-image: url(${sunset});
     background-size: cover;
     background-position: 0% 40%;
@@ -19,27 +20,29 @@ const Nav = styled.div`
     grid-template-rows: auto;
     grid-template-areas: '. logo menu .';
     
-    // &::before {    
-    //   content: "";
-    //   background-image: url(${sunset});
-    //   background-size: cover;
-    //   background-position: 0% 40%;
-    //   position: absolute;
-    //   top: 0px;
-    //   right: 0px;
-    //   bottom: 0px;
-    //   left: 0px;
-    //   opacity: 0.8;
-    // }
+    @media (max-width: 600px) {
+        height: 60vh;
+        grid-template-columns: auto;
+        grid-template-rows: 10vw repeat(2, 40vw) 10vw;
+        grid-template-areas: '.'
+                             'logo'
+                             'menu'
+                             '.';
+    }
 `
 
 const Logo = styled.div`
     grid-area: logo;
-    width: 100px;
-    height: 100px;
     justify-self: start;
-    background: url(${logo}) no-repeat;
-    margin: 20px;
+    margin-top: 20px;
+    img {
+        height: 130px;
+    }
+    @media (max-width: 600px) {
+        margin: 0;
+       align-self: start;
+       justify-self: center;
+    }
 `
 
 const Menu = styled.div`
@@ -48,13 +51,30 @@ const Menu = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-end;
     margin: 20px;
+    p {
+        margin: 5px;
+    }
+    
+    @media (max-width: 600px) {
+        margin: 0;
+       align-self: end;
+       justify-self: center;       
+       align-items: center;
+       p {
+          text-align: center;
+          font-weight: bold;
+       }
+    }
 `
 
 const Navbar = () => {
     return (
         <Nav>
-            <Logo />
+            <Logo>
+                <Image src={`${logo}`}/>
+            </Logo>
             <Menu>
                 <Text color={colors.white}>Book</Text>
                 <Text color={colors.white}>Leisure Travelling</Text>
