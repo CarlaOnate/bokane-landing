@@ -54,6 +54,7 @@ const Menu = styled.div`
     align-items: flex-end;
     margin: 20px;
     p {
+        font-weight: bold;
         margin: 5px;
     }
     p:hover {

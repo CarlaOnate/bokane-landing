@@ -5,9 +5,12 @@ import {colors} from '../variables'
 
 const Heading1 = styled.h1`
     color: ${props => props.color};
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
     width: 100%;
+    &:hover: {
+        cursor: default;
+    }
 `
 
 const Heading2 = styled.h2`
@@ -15,6 +18,9 @@ const Heading2 = styled.h2`
     font-size: 20px;
     margin: 0;
     width: 100%;
+    &:hover: {
+        cursor: default;
+    }
 `
 
 const Heading4 = styled.h4`
@@ -22,6 +28,9 @@ const Heading4 = styled.h4`
     font-size: 15px;
     margin: 0;
     width: 100%;
+    &:hover: {
+        cursor: default;
+    }
 `
 
 const Heading = ({color, type, children}) => {

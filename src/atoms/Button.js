@@ -7,7 +7,7 @@ const ButtonAtom = styled.button`
     background-color: rgba(45, 45, 45, 1);
     border: none;
     color: ${colors.white};
-    padding: 5px 15px 5px 15px;
+    padding: 0px 15px 0px 15px;
     &:hover {
         cursor: pointer;
     }
