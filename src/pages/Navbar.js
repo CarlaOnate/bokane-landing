@@ -56,6 +56,10 @@ const Menu = styled.div`
     p {
         margin: 5px;
     }
+    p:hover {
+        cursor: default;
+        color: rgba(234,168,57, 1);
+    }
     
     @media (max-width: 600px) {
         margin: 0;
@@ -66,6 +70,7 @@ const Menu = styled.div`
           text-align: center;
           font-weight: bold;
        }
+
     }
 `
 

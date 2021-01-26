@@ -5,6 +5,7 @@ import {colors} from '../variables'
 import Text from '../atoms/Text'
 import Heading from '../atoms/Heading'
 import Image from "../atoms/Image";
+import Button from "../atoms/Button";
 
 import sunsetFake from '../assets/fake_2.JPG'
 
@@ -14,7 +15,6 @@ const HomeContainer = styled.div`
 
 const Section1 = styled.section`
     margin: 20px;
-    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +37,7 @@ const Section1 = styled.section`
         }
     }
     div:nth-child(3) {
-        width: 30vw;
+        width: 40vw;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -49,7 +49,6 @@ const Section1 = styled.section`
         width: 100vw;
         img {
             width: 100%;
-            height: 300px;
         }
     }
     
@@ -68,12 +67,6 @@ const Section1 = styled.section`
     }
 `
 
-// const Section2 = styled.section`
-//     margin: 20px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// `
 
 const Home = () => {
     return (
@@ -89,7 +82,7 @@ const Home = () => {
                     <Text>You can camp, stay at one of our cabins or even book for a work-from-home cabin for a long stay in paradise.</Text>
                 </div>
                 <div>
-                    <button>Book</button>
+                    <Button>Book</Button>
                     <Text>or scroll to know more</Text>
                 </div>
                 <div>
