@@ -7,13 +7,15 @@ import {
 
 //Import of pages
 import Home from './pages/Home'
+import Navbar from "./pages/Navbar";
 
 
 
 const Router = () => (
     <BrowserRouter>
+        <Navbar/>
         <Switch>
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
         </Switch>
     </BrowserRouter>
 )
